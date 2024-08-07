@@ -1332,7 +1332,7 @@ section,
   top: calc(50% - 14px);
   color: #fff;
   transition: 0.3s;
-  line-height: 1.2;
+  line-height: 1;
 }
 
 .portfolio .portfolio-content .portfolio-info .preview-link:hover,

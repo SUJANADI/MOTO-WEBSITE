@@ -12,12 +12,9 @@
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link
@@ -38,62 +35,60 @@
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
   </head>
-</html>
+
+  <body class="index-page">
+    <!-- Preloader -->
 
 
-</head>
+    <header id="header" class="header d-flex align-items-center sticky-top">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center"
+      >
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <img src="assets\img\final_logo.png" alt="img" />
+          <h1 class="sitename">MOTOMANIPAL</h1>
+        </a>
 
-<body class="index-page">
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div
-      class="container-fluid container-xl position-relative d-flex align-items-center"
-    >
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <img src="assets\img\final_logo.png" alt="img" />
-        <h1 class="sitename">MotoManipal</h1>
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html#hero" class="active">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#clients">Sponsors</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="team.html">Team</a></li>
-          <!-- <li class="dropdown">
-            <a href="#"
-              ><span>Dropdown</span>
-              <i class="bi bi-chevron-down toggle-dropdown"></i
-            ></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown">
-                <a href="#"
-                  ><span>Deep Dropdown</span>
-                  <i class="bi bi-chevron-down toggle-dropdown"></i
-                ></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li> -->
-          <li><a href="sponsorportal.html">Sponsor Portal</a></li>
-        </ul>
-      </nav>
-
-      <a class="btn-recrute" href="recrutement.html">RECRUTEMENTS!</a>
-      <a class="btn-getstarted" href="index.html#contact">Contact</a>
-      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-    </div>
-  </header>
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html#hero" class="active">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#clients">Sponsors</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="team.html">Team</a></li>
+            <!-- <li class="dropdown">
+              <a href="#"
+                ><span>Dropdown</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i
+              ></a>
+              <ul>
+                <li><a href="#">Dropdown 1</a></li>
+                <li class="dropdown">
+                  <a href="#"
+                    ><span>Deep Dropdown</span>
+                    <i class="bi bi-chevron-down toggle-dropdown"></i
+                  ></a>
+                  <ul>
+                    <li><a href="#">Deep Dropdown 1</a></li>
+                    <li><a href="#">Deep Dropdown 2</a></li>
+                    <li><a href="#">Deep Dropdown 3</a></li>
+                    <li><a href="#">Deep Dropdown 4</a></li>
+                    <li><a href="#">Deep Dropdown 5</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Dropdown 2</a></li>
+                <li><a href="#">Dropdown 3</a></li>
+                <li><a href="#">Dropdown 4</a></li>
+              </ul>
+            </li> -->
+            <li><a href="sponsorportal.html">Sponsor Portal</a></li>
+          </ul>
+        </nav>
+        <a class="btn-recrute" href="recrutement.html">RECRUTEMENTS!</a>
+        <a class="btn-getstarted" href="index.html#contact">CONTACT</a>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </div>
+    </header>
 
   <main class="main">
 
@@ -126,7 +121,7 @@
         data-aos-delay="100"
       >
         <div class="member">
-          <img src="assets\img\team_imgs\George Varghese.jpg" class="img-fluid" alt="" />
+          <img src="https://i.postimg.cc/mgVwxdH9/George-Varghese.jpg" class="img-fluid" alt="" />
           <div class="member-info">
             <div class="member-info-content">
               <h4>Mr. George Varghese</h4>
@@ -146,7 +141,7 @@
         data-aos-delay="100"
       >
         <div class="member">
-          <img src="assets\img\team_imgs\Dr. Veerandra Babu.jpg" class="img-fluid" alt="" />
+          <img src="https://i.postimg.cc/zGqjcmV5/Dr-Veerandra-Babu.jpg" class="img-fluid" alt="" />
           <div class="member-info">
             <div class="member-info-content">
               <h4>Dr Arigela Sri Satya Veerendra Babu</h4>
@@ -171,7 +166,7 @@
         data-aos-delay="100"
       >
         <div class="member">
-          <img src="assets\img\team_imgs\Jishnu.jpg" class="img-fluid" alt="" />
+          <img src="https://i.postimg.cc/prNQQ4gw/Jishnu.jpg" class="img-fluid" alt="" />
           <div class="member-info">
             <div class="member-info-content">
               <h4>Jishnu Kunal Vuturkuru</h4>
@@ -194,7 +189,7 @@
         data-aos-delay="200"
       >
         <div class="member">
-          <img src="assets\img\team_imgs\sai.jpg" class="img-fluid" alt="" />
+          <img src="https://i.postimg.cc/Bnhx7Xrc/sai.jpg" class="img-fluid" alt="" />
           <div class="member-info">
             <div class="member-info-content">
               <h4>Sai Adithya Pavan</h4>
@@ -218,7 +213,7 @@
         data-aos-delay="300"
       >
         <div class="member">
-          <img src="assets\img\team_imgs\christie.jpg" class="img-fluid" alt="" />
+          <img src="https://i.postimg.cc/rw1hcm0N/christie.jpg" class="img-fluid" alt="" />
           <div class="member-info">
             <div class="member-info-content">
               <h4>Christie Matthews</h4>
@@ -241,7 +236,7 @@
         data-aos-delay="300"
       >
         <div class="member">
-          <img src="assets\img\team_imgs\rishith.jpg" class="img-fluid" alt="" />
+          <img src="https://i.postimg.cc/mD5jV1JB/rishith.jpg" class="img-fluid" alt="" />
           <div class="member-info">
             <div class="member-info-content">
               <h4>Rishith Khanna</h4>
@@ -264,7 +259,7 @@
         data-aos-delay="300"
       >
         <div class="member">
-          <img src="assets\img\team_imgs\Siddhanth.jpg" class="img-fluid" alt="" />
+          <img src="https://i.postimg.cc/G2HVcR13/Siddhanth.jpg" class="img-fluid" alt="" />
           <div class="member-info">
             <div class="member-info-content">
               <h4>Siddhanth Santhosh </h4>
@@ -291,7 +286,7 @@
         data-aos-delay="400"
       >
         <div class="member">
-          <img src="assets\img\team_imgs\Rajneesh.jpg" class="img-fluid" alt="" />
+          <img src="https://i.postimg.cc/R0GX6DT3/Rajneesh.jpg" class="img-fluid" alt="" />
           <div class="member-info">
             <div class="member-info-content">
               <h4>Rajneesh</h4>
@@ -314,7 +309,7 @@
         data-aos-delay="400"
       >
         <div class="member">
-          <img src="assets\img\team_imgs\Santhosh.jpg" class="img-fluid" alt="" />
+          <img src="https://i.postimg.cc/cLSpfPfT/Santhosh.jpg" class="img-fluid" alt="" />
           <div class="member-info">
             <div class="member-info-content">
               <h4>Santhosh Karthikeyan</h4>
@@ -337,7 +332,7 @@
         data-aos-delay="400"
       >
         <div class="member">
-          <img src="assets\img\team_imgs\Rajavarshan.jpg" class="img-fluid" alt="" />
+          <img src="https://i.postimg.cc/ncQRRTn5/Rajavarshan.jpg" class="img-fluid" alt="" />
           <div class="member-info">
             <div class="member-info-content">
               <h4>Rajavarshan</h4>
@@ -364,7 +359,7 @@
             data-aos-delay="100"
           >
             <div class="member">
-              <img src="assets\img\team_imgs\param.jpg" class="img-fluid" alt="" />
+              <img src="https://i.postimg.cc/x1DsWHCd/param.jpg" class="img-fluid" alt="" />
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Param Raghuvanshi</h4>
@@ -388,7 +383,7 @@
             data-aos-delay="300"
           >
             <div class="member">
-              <img src="assets\img\team_imgs\Krutarth.jpg" class="img-fluid" alt="" />
+              <img src="https://i.postimg.cc/Fs2qN8PN/Krutarth.jpg" class="img-fluid" alt="" />
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Krutarth Shah</h4>
@@ -411,7 +406,7 @@
             data-aos-delay="400"
           >
             <div class="member">
-              <img src="assets\img\team_imgs\shyam.jpg" class="img-fluid" alt="" />
+              <img src="https://i.postimg.cc/BnBdpNg3/shyam.jpg" class="img-fluid" alt="" />
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Shyam Sunder</h4>
@@ -434,7 +429,7 @@
         data-aos-delay="400"
       >
         <div class="member">
-          <img src="assets\img\team_imgs\Ayush.jpg" class="img-fluid" alt="" />
+          <img src="https://i.postimg.cc/y83HT0GY/Ayush.jpg" class="img-fluid" alt="" />
           <div class="member-info">
             <div class="member-info-content">
               <h4>Ayush Acharya </h4>
@@ -457,7 +452,7 @@
         data-aos-delay="400"
       >
         <div class="member">
-          <img src="assets\img\team_imgs\Varun.jpg" class="img-fluid" alt="" />
+          <img src="https://i.postimg.cc/vmPCFBkS/Varun.jpg" class="img-fluid" alt="" />
           <div class="member-info">
             <div class="member-info-content">
               <h4>Varunkumar Iyer</h4>
