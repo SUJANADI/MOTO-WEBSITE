@@ -34,7 +34,7 @@
 //     const navLinks = document.querySelectorAll('.navmenu a');
 
 //     navLinks.forEach(link => {
-//       if (link.href === currentLocation) {
+//       if (currentLocation.includes(link.href)) {
 //         link.classList.add('active');
 //       } else {
 //         link.classList.remove('active');
@@ -45,13 +45,35 @@
 //   highlightActiveNavLink(); // Call initially to highlight the correct link on page load
 
 //   /**
+//    * Scrollspy functionality for navigation menu
+//    */
+//   function navmenuScrollspy() {
+//     const sections = document.querySelectorAll('.section'); // Assuming sections have a class 'section'
+
+//     sections.forEach(section => {
+//       const navLinks = document.querySelectorAll('.navmenu a[href="#' + section.id + '"]');
+//       const scrollPosition = window.scrollY;
+
+//       if (section.offsetTop <= scrollPosition && section.offsetTop + section.offsetHeight > scrollPosition) {
+//         navLinks.forEach(link => link.classList.add('active'));
+//       } else {
+//         navLinks.forEach(link => link.classList.remove('active'));
+//       }
+//     });
+//   }
+
+//   window.addEventListener('load', navmenuScrollspy);
+//   document.addEventListener('scroll', navmenuScrollspy);
+
+//   /**
 //    * Hide mobile nav on same-page/hash links
 //    */
-//   document.querySelectorAll('#navmenu a').forEach(navmenu => {
+//   document.querySelectorAll('.navmenu a').forEach(navmenu => {
 //     navmenu.addEventListener('click', () => {
 //       if (document.querySelector('.mobile-nav-active')) {
 //         mobileNavToogle();
 //       }
+//       highlightActiveNavLink(); // Highlight the clicked link
 //     });
 //   });
 
@@ -197,33 +219,112 @@
 //     }
 //   });
 
-//   /**
-//    * Navmenu Scrollspy
-//    */
-//   function navmenuScrollspy() {
-//     navmenulinks.forEach(navmenulink => {
-//       if (!navmenulink.hash) return;
-//       let section = document.querySelector(navmenulink.hash);
-//       if (!section) return;
-//       let position = window.scrollY + 200;
-//       if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-//         document.querySelectorAll('.navmenu a.active').forEach(link => link.classList.remove('active'));
-//         navmenulink.classList.add('active');
-//       } else {
-//         navmenulink.classList.remove('active');
-//       }
-//     })
-//   }
+// /*RESPONSIVE VIDEO */
 
-//   window.addEventListener('load', navmenuScrollspy);
-//   document.addEventListener('scroll', navmenuScrollspy);
+// // //get all vids
+// // var video =  document.querySelectorAll('video')
+
+// // //add source to video tag
+// // function addSourceToVideo(element, src) {
+// //     var source = document.createElement('source');
+// //     source.src = src;
+// //     source.type = 'video/mp4';
+// // 	console.log(src);
+// //     element.appendChild(source);
+	
+// // }
+
+// // //determine screen size and select mobile or desktop vid
+// // function whichSizeVideo(element, src) {
+// // 	var windowWidth = window.innerWidth ? window.innerWidth : $(window).width();
+// // 	if (windowWidth > 1200 ) {
+// // 		addSourceToVideo( element, src.dataset.desktopVid);
+// // 	} else {
+// // 		addSourceToVideo(element, src.dataset.mobileVid);
+// // 	}
+// // }
+
+// // //init only if page has videos
+// // function videoSize() {
+// // 	if (video !== undefined) {
+// // 	video.forEach(function(element, index) {
+// // 			whichSizeVideo(  
+// // 				element, //element
+// // 				element  //src locations
+// // 			);	
+// // 		});
+// // 	}
+// // }
+// // videoSize();
+
+
+// // //note IE11 polyfill needed for each, convert to for loop.
+
+// // // Get all <iframe> tags
+// // var iframes = document.querySelectorAll('iframe');
+
+// // // Add source to <iframe> tag
+// // function addSourceToIframe(element, src) {
+// //     element.src = src;
+// //     console.log(src);
+// // }
+
+// // // Determine screen size and select mobile or desktop video
+// // function whichSizeVideo(element) {
+// //     var windowWidth = window.innerWidth ? window.innerWidth : $(window).width();
+// //     if (windowWidth > 1200) {
+// //         addSourceToIframe(element, element.dataset.desktopVid);
+// //     } else {
+// //         addSourceToIframe(element, element.dataset.mobileVid);
+// //     }
+// // }
+
+// // // Init only if page has <iframe> tags
+// // function videoSize() {
+// //     if (iframes.length > 0) {
+// //         for (var i = 0; i < iframes.length; i++) {
+// //             var element = iframes[i];
+// //             whichSizeVideo(element);
+// //         }
+// //     }
+// // }
+
+// // videoSize();
+
+// document.addEventListener("DOMContentLoaded", function() {
+//   var videoElement = document.getElementById('background-video');
+//   var windowWidth = window.innerWidth ? window.innerWidth : $(window).width();
+
+//   if (windowWidth > 1199) {
+//       videoElement.src = "assets/img/video/bg_video_website.mp4";
+//   } else {
+//       videoElement.src = "assets/img/video/website video animation vertical.mp4";
+//   }
+// });
+
+
+// /*team video pause button */
+// const videoContainer = document.getElementById('videoContainer');
+// const video = document.getElementById('myVideo');
+// const playButton = document.getElementById('playButton');
+
+// playButton.addEventListener('click', () => {
+//   if (video.paused) {
+//     video.play();
+//   } else {
+//     video.pause();
+//   }
+// });
+
+// video.addEventListener('play', () => {
+//   videoContainer.classList.remove('paused');
+// });
+
+// video.addEventListener('pause', () => {
+//   videoContainer.classList.add('paused');
+// });
 
 // })();
-
-
-
-
-
 
 
 (function() {
@@ -447,109 +548,54 @@
     }
   });
 
-/*RESPONSIVE VIDEO */
+  /*RESPONSIVE VIDEO */
+  // Video-related code here (commented out for clarity)
 
-// //get all vids
-// var video =  document.querySelectorAll('video')
+  document.addEventListener("DOMContentLoaded", function() {
+    var videoElement = document.getElementById('background-video');
+    var windowWidth = window.innerWidth ? window.innerWidth : $(window).width();
 
-// //add source to video tag
-// function addSourceToVideo(element, src) {
-//     var source = document.createElement('source');
-//     source.src = src;
-//     source.type = 'video/mp4';
-// 	console.log(src);
-//     element.appendChild(source);
-	
-// }
+    if (windowWidth > 1199) {
+        videoElement.src = "assets/img/video/bg_video_website.mp4";
+    } else {
+        videoElement.src = "assets/img/video/website video animation vertical.mp4";
+    }
+  });
 
-// //determine screen size and select mobile or desktop vid
-// function whichSizeVideo(element, src) {
-// 	var windowWidth = window.innerWidth ? window.innerWidth : $(window).width();
-// 	if (windowWidth > 1200 ) {
-// 		addSourceToVideo( element, src.dataset.desktopVid);
-// 	} else {
-// 		addSourceToVideo(element, src.dataset.mobileVid);
-// 	}
-// }
+  /*team video pause button */
+  const videoContainer = document.getElementById('videoContainer');
+  const video = document.getElementById('myVideo');
+  const playButton = document.getElementById('playButton');
 
-// //init only if page has videos
-// function videoSize() {
-// 	if (video !== undefined) {
-// 	video.forEach(function(element, index) {
-// 			whichSizeVideo(  
-// 				element, //element
-// 				element  //src locations
-// 			);	
-// 		});
-// 	}
-// }
-// videoSize();
+  playButton.addEventListener('click', () => {
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  });
 
+  video.addEventListener('play', () => {
+    videoContainer.classList.remove('paused');
+  });
 
-// //note IE11 polyfill needed for each, convert to for loop.
+  video.addEventListener('pause', () => {
+    videoContainer.classList.add('paused');
+  });
 
-// // Get all <iframe> tags
-// var iframes = document.querySelectorAll('iframe');
+  // iOS specific code
+  // function isIOS() {
+  //   return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  // }
 
-// // Add source to <iframe> tag
-// function addSourceToIframe(element, src) {
-//     element.src = src;
-//     console.log(src);
-// }
-
-// // Determine screen size and select mobile or desktop video
-// function whichSizeVideo(element) {
-//     var windowWidth = window.innerWidth ? window.innerWidth : $(window).width();
-//     if (windowWidth > 1200) {
-//         addSourceToIframe(element, element.dataset.desktopVid);
-//     } else {
-//         addSourceToIframe(element, element.dataset.mobileVid);
-//     }
-// }
-
-// // Init only if page has <iframe> tags
-// function videoSize() {
-//     if (iframes.length > 0) {
-//         for (var i = 0; i < iframes.length; i++) {
-//             var element = iframes[i];
-//             whichSizeVideo(element);
-//         }
-//     }
-// }
-
-// videoSize();
-
-document.addEventListener("DOMContentLoaded", function() {
-  var videoElement = document.getElementById('background-video');
-  var windowWidth = window.innerWidth ? window.innerWidth : $(window).width();
-
-  if (windowWidth > 1199) {
-      videoElement.src = "assets/img/video/bg_video_website.mp4";
-  } else {
-      videoElement.src = "assets/img/video/website video animation vertical.mp4";
-  }
-});
-
-
-/*team video pause button */
-const videoContainer = document.getElementById('videoContainer');
-const video = document.getElementById('myVideo');
-const playButton = document.getElementById('playButton');
-
-playButton.addEventListener('click', () => {
-  if (video.paused) {
-    video.play();
-  } else {
-    video.pause();
-  }
-});
-
-video.addEventListener('play', () => {
-  videoContainer.classList.remove('paused');
-});
-
-video.addEventListener('pause', () => {
-  videoContainer.classList.add('paused');
-});
+  // window.addEventListener('load', function() {
+  //   if (isIOS()) {
+  //     var iosImage = document.createElement('img');
+  //     iosImage.src = 'https://i.postimg.cc/sgkRKbjF/ios-img.png';  // Replace with the actual image URL
+  //     iosImage.alt = 'iOS Only Image';
+  //     iosImage.style.display = 'block';
+  //     document.body.appendChild(iosImage);
+  //   }
+  // });
 
 })();
