@@ -201,17 +201,80 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# IOS Device Background
+# SUBSYSTEM
 --------------------------------------------------------------*/
-/* .iosImage {
-  display: none;
-  max-width: 100%;
-  height: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
+.subsystems {
+  max-width: 600px;
+  text-align: center; /* Center the text within the block */
+  margin-left: 30%;
+  background-color: transparent; /* Make the background transparent */
+  border-radius: 8px; /* Optional: Rounded corners */
+  line-height: 1.6; /* Line spacing */
+  margin-top: 20px; /* Add spacing between the form and the subsystems text */
+}
+
+/* Subclass for specific text */
+.subsystems .inter {
+  color: #ffffff; /* Secondary color for the E-powertrain section */
+  font-style: italic; /* Italicize the text */
+}
+
+.subsystems p {
+  margin-bottom: 20px;
+}
+
+.subsystems strong {
+  color: #B266FF; /* Primary color */
+  font-size: 18px;
+}
+
+/* .resources a {
+  color: rgb(62, 129, 255); 
+  text-decoration: underline; 
+}
+
+.resource-list {
+  list-style-type: none; 
+  padding: 0; 
+}
+
+.resource-list li {
+  display: inline; 
+  margin-right: 15px; 
 } */
 
+.resources a {
+  color: rgb(255, 255, 255); /* Default color for links */
+  text-decoration: underline; /* Underline links */
+  font-style: italic;
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.resources a:hover {
+  color: var(--nav-dropdown-color); /* Change color to blue on hover */
+}
+
+.resource-list {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+}
+
+.resource-list li {
+  display: inline; /* Display items in a single line */
+  margin-right: 15px; /* Space between items */
+}
+
+@media (max-width: 1199px) {
+  .subsystems {
+    max-width: 100%;
+    margin: 20px;
+    padding: 20px;
+    height: auto;
+    min-height: 200px; /* Adjust video height as needed */
+    border-radius: 18%;
+    margin: 0%;
+  }
+}
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
