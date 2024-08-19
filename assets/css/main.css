@@ -204,9 +204,9 @@ h6 {
 # SUBSYSTEM
 --------------------------------------------------------------*/
 .subsystems {
-  max-width: 600px;
+  max-width: 900px;
   text-align: center; /* Center the text within the block */
-  margin-left: 30%;
+  margin-left: 25rem;
   background-color: transparent; /* Make the background transparent */
   border-radius: 8px; /* Optional: Rounded corners */
   line-height: 1.6; /* Line spacing */
