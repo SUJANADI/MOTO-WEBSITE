@@ -131,7 +131,7 @@ h6 {
 }
 
 @media (max-width: 1200px) {
-  /* .header .logo {
+  .header .logo {
     order: 1;
   }
 
@@ -144,12 +144,12 @@ h6 {
 
  .header .navmenu {
     order: 3;
-  } */
-  .header .btn-getstarted {
+  } 
+  /* .header .btn-getstarted {
     display: none;
-  }
+  } */
 }
-.header .btn-recrute,
+/* .header .btn-recrute,
 .header .btn-recrute:focus {
   color: var(--contrast-color);
   background: var(--heading-color);
@@ -183,7 +183,7 @@ h6 {
 .header .navmenu {
   order: 3;
 }
-}
+} */
 /*--------------------------------------------------------------
 # Background video
 --------------------------------------------------------------*/
