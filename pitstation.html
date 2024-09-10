@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>MOTOMANIPAL</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <!--favicon files-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://i.postimg.cc/MHf0XFtP/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://i.postimg.cc/kMLzw3r5/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://i.postimg.cc/3WMXGFcK/favicon-16x16.png"
+    />
+    <link rel="manifest" href="site.webmanifest" />
+  </head>
+  <body class="background">
+    <header>
+      <header id="header" class="header d-flex align-items-center sticky-top">
+        <div
+          class="container-fluid container-xl position-relative d-flex align-items-center"
+        >
+          <a href="index.html" class="logo d-flex align-items-center me-auto">
+            <img src="assets\img\final_logo.png" alt="img" />
+            <h1 class="sitename">MOTOMANIPAL</h1>
+          </a>
+
+          <nav id="navmenu" class="navmenu">
+            <ul>
+              <li><a href="index.html#hero" class="active">Home</a></li>
+              <li><a href="index.html#about">About</a></li>
+              <li><a href="index.html#clients">Sponsors</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="team.html">Team</a></li>
+              <!-- <li class="dropdown">
+                    <a href="#"
+                      ><span>Dropdown</span>
+                      <i class="bi bi-chevron-down toggle-dropdown"></i
+                    ></a>
+                    <ul>
+                      <li><a href="#">Dropdown 1</a></li>
+                      <li class="dropdown">
+                        <a href="#"
+                          ><span>Deep Dropdown</span>
+                          <i class="bi bi-chevron-down toggle-dropdown"></i
+                        ></a>
+                        <ul>
+                          <li><a href="#">Deep Dropdown 1</a></li>
+                          <li><a href="#">Deep Dropdown 2</a></li>
+                          <li><a href="#">Deep Dropdown 3</a></li>
+                          <li><a href="#">Deep Dropdown 4</a></li>
+                          <li><a href="#">Deep Dropdown 5</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Dropdown 2</a></li>
+                      <li><a href="#">Dropdown 3</a></li>
+                      <li><a href="#">Dropdown 4</a></li>
+                    </ul>
+                  </li> -->
+              <li><a href="sponsorportal.html">Sponsor Portal</a></li>
+            </ul>
+          </nav>
+          <a class="btn-recrute" href="pitstation.html">VIRTUAL PIT</a>
+          <a class="btn-getstarted" href="index.html#contact">CONTACT US</a>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </div>
+    </header>
+    <body>
+        <div class="division">
+            <p class="para_font">
+              <span class="label">SPEED:</span>
+              <span id="speed" class="data">N/A</span>
+            </p>
+            <p class="para_font">
+              <span class="label">ODOMETER:</span>
+              <span id="trip" class="data">N/A</span>
+            </p>
+            <p class="para_font">
+              <span class="label">RPM:</span>
+              <span id="rpm" class="data">N/A</span>
+            </p>
+            <p class="para_font">
+              <span class="label">CHASSIS TEMP:</span>
+              <span id="chasis-temp" class="data">N/A</span>
+            </p>
+            <p class="para_font">
+              <span class="label">LEAN ANGLE:</span>
+              <span id="lean-angle" class="data">N/A</span>
+            </p>
+            <p class="para_font">
+              <span class="label">MCU TEMP:</span>
+              <span id="controller-temp" class="data">N/A</span>
+            </p>
+            <p class="para_font">
+              <span class="label">BATTERY TEMP:</span>
+              <span id="battery-temp" class="data">N/A</span>
+            </p>
+            <p class="para_font">
+              <span class="label">TIMER1:</span>
+              <span id="timer1" class="data">N/A</span>
+            </p>
+            <p class="para_font">
+              <span class="label">TIMER2:</span>
+              <span id="timer2" class="data">N/A</span>
+            </p>
+        </div>
+          
+        
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+      import {
+        getDatabase,
+        ref,
+        onValue,
+      } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-database.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-analytics.js";
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyCymfCMMiGADGlYrP-jAbIU7Wcagkom5qI",
+        authDomain: "motomanipal-pitstation.firebaseapp.com",
+        databaseURL:
+          "https://motomanipal-pitstation-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "motomanipal-pitstation",
+        storageBucket: "motomanipal-pitstation.appspot.com",
+        messagingSenderId: "881619800905",
+        appId: "1:881619800905:web:b58ab7adf62f1ecd998098",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const database = getDatabase(app);
+      const analytics = getAnalytics(app);
+
+      // Reference to your database path
+      const dbRef = ref(database, "sensor_data/raw_data");
+
+      // Function to handle data updates
+      function handleData(snapshot) {
+        const rawData = snapshot.val();
+        console.log("Data received:", rawData); // Log raw data for debugging
+        if (rawData) {
+          // Parse the raw data
+          const dataArray = rawData.split("\t"); // Use tab as the delimiter
+          const speed = dataArray[0] || "N/A";
+          const odometer = dataArray[1] || "N/A";
+          const rpm = dataArray[2] || "N/A";
+          const chassis_temperature = dataArray[3] || "N/A";
+          const tilt = dataArray[4] || "N/A";
+          const controller_temperature = dataArray[7] || "N/A";
+          const battery_temperature = dataArray[8] || "N/A";
+          const timer1 = dataArray[5] || "N/A";
+          const timer2 = dataArray[6] || "N/A";
+
+          // Update HTML elements
+          document.getElementById("speed").innerText = `${speed}`;
+          document.getElementById("trip").innerText = `${odometer}`;
+          document.getElementById("rpm").innerText = `${rpm}`;
+          document.getElementById(
+            "chasis-temp"
+          ).innerText = `${chassis_temperature}`;
+          document.getElementById(
+            "lean-angle"
+          ).innerText = `${tilt}`;
+          document.getElementById(
+            "controller-temp"
+          ).innerText = `${controller_temperature}`;
+          document.getElementById(
+            "battery-temp"
+          ).innerText = `${battery_temperature}`;
+          document.getElementById("timer1").innerText = `${timer1}`;
+          document.getElementById("timer2").innerText = `${timer2}`;
+        } else {
+          console.log("No data found");
+        }
+      }
+
+      // Listen for value changes and update HTML
+      onValue(dbRef, handleData);
+    </script>
+  </body>
+</html>

@@ -131,6 +131,7 @@ h6 {
 }
 
 @media (max-width: 1200px) {
+
   .header .logo {
     order: 1;
   }
@@ -145,11 +146,11 @@ h6 {
  .header .navmenu {
     order: 3;
   } 
-  /* .header .btn-getstarted {
+   .header .btn-getstarted {
     display: none;
-  } */
+  } 
 }
-/* .header .btn-recrute,
+.header .btn-recrute,
 .header .btn-recrute:focus {
   color: var(--contrast-color);
   background: var(--heading-color);
@@ -183,7 +184,7 @@ h6 {
 .header .navmenu {
   order: 3;
 }
-} */
+} 
 /*--------------------------------------------------------------
 # Background video
 --------------------------------------------------------------*/
@@ -2015,4 +2016,50 @@ section,
 
 .col-lg-6{
   border-radius: 20%;
+}
+
+/*--------------------------------------------------------------
+# VIRTUAL PIT
+--------------------------------------------------------------*/
+.division {
+  background-color: rgba(53, 51, 51, 0.9); /* Semi-transparent dark background */
+  height: 600px;
+  width: 90%; /* Set width to 90% for responsiveness */
+  max-width: 1050px; /* Maximum width for larger screens */
+  margin: 40px auto; /* Centers the element horizontally and adds top margin */
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box; /* Ensures padding doesn't affect the width */
+}
+
+.para_font {
+
+  display: flex;
+  justify-content: space-between; /* Ensures even spacing between label and data */
+  color: white; /* White font color */
+  font-size: 25px;
+  margin-bottom: 20px; /* Adds spacing between rows */
+  margin-left: 5rem;
+  max-width: 800px; /* Ensures content is not too wide */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle shadow for readability */
+}
+
+.label {
+
+  flex-basis: 50%; /* Adjusts the width of the label */
+  text-align: left; /* Aligns the label to the left */
+  white-space: nowrap; /* Prevents wrapping of the label */
+}
+
+.data {
+  flex-basis: 60%; /* Adjusts the width of the data */
+  text-align: right; /* Aligns the data to the right */
+  white-space: nowrap; /* Prevents wrapping of the data */
+}
+
+@media (max-width: 1199px) {
+  .para_font{
+    margin-left: 15px;
+  }
+  
 }
