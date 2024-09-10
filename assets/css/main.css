@@ -114,6 +114,10 @@ h6 {
 }
 
 .header .btn-getstarted,
+/* contact us button disable */
+.header .btn-getstarted {
+  display: none;
+} 
 .header .btn-getstarted:focus {
   color: var(--contrast-color);
   background: var(--accent-color);
