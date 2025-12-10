@@ -1288,6 +1288,7 @@ section,
 /*--------------------------------------------------------------
 # Portfolio Section same as gallery
 --------------------------------------------------------------*/
+
 .img-main {
   display: block;
   margin-left: 25%;
@@ -1523,6 +1524,13 @@ section,
   .team_img {
     display: none;
   }
+}
+
+.boxvc {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  
 }
 
 .team_img {
