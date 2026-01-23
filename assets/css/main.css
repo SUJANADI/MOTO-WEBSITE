@@ -1645,13 +1645,14 @@ section,
 }
 
 .clients .swiper-slide img {
-  opacity: 0.5;
+  opacity: 1;
   transition: 0.3s;
 }
 
 .clients .swiper-slide img:hover {
   filter: none;
   opacity: 1;
+  transform: scale(1.5);
 }
 
 .clients .swiper-wrapper {
